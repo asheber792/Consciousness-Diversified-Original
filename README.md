@@ -117,7 +117,7 @@ static navigationOptions = ({navigation}) => {
 
 | Original Plan | Outcome | 
 | --- | :---: |  
-| Have one Information component | Split into multiple (4) components because too much data to have on a single page | 
+| Have one Information component | Split into multiple (6) components because too much data to have on a single page | 
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
