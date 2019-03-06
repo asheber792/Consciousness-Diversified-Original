@@ -13,21 +13,6 @@ export default class JournalEntry extends Component {
     	title: 'Journal Entry ',
   	}
 
-  	getJournalEntry = async () => {
-  		try {
-  			const response = axios.get(`http://58f6feea.ngrok.io/journal_entries/${this.state.entry.id}`)
-  			console.log('===============>',response.data)
-
-  			this.setState({
-  				//entry: response.data, 
-  				entryLoaded: true
-  			})
-  		}
-  		catch(e) {
-  			console.error('error: ', e)
-  		}
-  	}
-
 
   	onEntryDelete = async evnt => {
   		try {
@@ -49,11 +34,6 @@ export default class JournalEntry extends Component {
   			console.error('error: ', e)
   		}
   	}
-
-  	componentDidMount = () => {
-  		this.getJournalEntry()
-  	}
-
 	render() {
 		return (
 			<RN.View style={{ flex: 1, justifyContent: "center" }}>

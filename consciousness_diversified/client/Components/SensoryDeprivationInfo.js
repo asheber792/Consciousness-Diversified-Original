@@ -17,7 +17,6 @@ export default class LucidDreamingInfo extends Component {
   render() {
     return (
     	<View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 15 }}> 
-	      	<Header navigation={this.props.navigation} />
 	      	<InfoNav navigation={this.props.navigation} />
 	        <ScrollView>
 	        	<Text style={{fontWeight: 'bold', fontSize: 18}}>{"\n"}Sensory Deprivation</Text> 

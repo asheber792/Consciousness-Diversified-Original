@@ -9,7 +9,7 @@ export default class LucidDreamingInfo extends Component {
 		return{
 	    	headerTitle: <HeaderTitle />,
 	    	headerRight: (
-	    		<Text style={{flex:1, marginLeft: -15}} onPress={() => navigation.navigate("Home")}>Logout</Text>
+	    		<Text style={{flex:1}} onPress={() => navigation.navigate("Home")}>Logout</Text>
 	    	)
 		}
   	};
