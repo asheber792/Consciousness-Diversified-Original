@@ -12,10 +12,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |2/26/19| Project Description | Complete
 |2/26/19| Wireframes / Priority Matrix / Functional Components | Complete
-|2/27/19| Core Application Structure (Routes - Client/Server) | Incomplete
-|2/28/19| Pseudocode / actual code | Incomplete
-|3/2/19| MVP unstyled | Incomplete
-|3/3/19| MVP styled | Incomplete
+|2/27/19| Core Application Structure (Routes - Client/Server) | Complete
+|2/28/19| Pseudocode / actual code | Complete
+|3/2/19| MVP unstyled | Complete
+|3/3/19| MVP styled | Complete
 |3/6/19| Present | Incomplete
 
 
@@ -60,14 +60,13 @@ https://res.cloudinary.com/dj10zwlqs/image/upload/v1551211206/Project4/P4-ERD.jp
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-#### SAMPLE.....
 | Component | Description | 
 | --- | :---: |  
-| Header | This will render the header navigation | 
+| HeaderTitle | This will render the top header | 
 | New Journal Entry | Form for adding new entries | 
-| Journal List | Lists all journal entries | 
-| Edit Journal Entry | edit form for a single journal entry | 
-| Instructions | intructions/technique info page | 
+| JournalEntries | Lists all journal entries | 
+| EditJournalEntry | edit form for a single journal entry | 
+| Information | intructions/technique info page | 
 | Journal Entry | single journal entry |  
 
 
@@ -76,55 +75,52 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| User Auth | H | 5hrs| ??hrs |
-| CRUD for Dream Journal | H | 6hrs| ??hrs |
-| Server Side Routes | H | 4hrs| ??hrs |
-| Client Views | H | 4hrs| ??hrs |
-| Styling | M | 4hrs| ??hrs |
-| Splash Page | L | 3hrs| ??hrs |
-| Post MVP | L | 10hrs| ??hrs |
-| Total | H | 36hrs| ??hrs | 
-
-## Helper Functions
-Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
-
-#### SAMPLE.....
-| Function | Description | 
-| --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
-
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
- 
- #### SAMPLE.....
-| Library | What it Does | 
-| --- | :---: |  
-| Bootstrap | Used to help style my application | 
-| Giphy API | Used to get gifs to use | 
-
+| User Auth | H | 5hrs| 12hrs |
+| CRUD for Dream Journal | H | 6hrs| 16hrs |
+| Server Side Routes | H | 4hrs| 5hrs |
+| Client Views | H | 4hrs| 4hrs |
+| Styling | M | 4hrs| 6hrs |
+| Splash Page | L | 3hrs| 1.5hrs |
+| Post MVP | L | 10hrs| 0hrs |
+| Total | H | 36hrs| 44.5hrs | 
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-#### SAMPLE.....
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+<View style={{flexDirection: 'row'}}>
+      <View style={{flex: 1}}>
+        <Image
+          source={require('../assets/app_images/ouro_logo.png')}
+          style={{ width: 30, height: 30, marginLeft: '15%' }}
+        />
+      </View>
+      
+      <Text style={{flex:3, fontWeight: 'bold', color: 'white', fontSize: 16, marginLeft: '5%'}}>Consciousness Diversified</Text>
+      </View>
+```
+
+```
+static navigationOptions = ({navigation}) => {
+	return{
+	    	headerTitle: <HeaderTitle />,
+	    	headerRight: (
+	    		<Text style={{flex:1}} onPress={() => navigation.navigate("Home")}>Logout</Text>
+	    	)
+	}
+  };
 ```
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
 
-#### SAMPLE.....
 | Original Plan | Outcome | 
 | --- | :---: |  
-| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated | 
+| Have one Information component | Split into multiple (4) components because too much data to have on a single page | 
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: ActionController::ParameterMissing                           
+**RESOLUTION**: typo/bug capitalized a variable name that shouldn'y have been
