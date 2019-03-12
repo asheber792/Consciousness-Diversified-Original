@@ -14,7 +14,11 @@ export default class HeaderTitle extends React.Component {
       loggedOut: true
     })
 
-    await this.props.navigation.navigate("Home") 
+    RN.Alert.alert(
+        'Logged Out!', 
+        '',
+        [{text: 'OK', onPress: () => this.props.navigation.navigate("Home")}]
+    ) 
   }
 
   render() {
@@ -23,7 +27,7 @@ export default class HeaderTitle extends React.Component {
       <View style={{flex: 1}}>
         <Image
           source={require('../assets/app_images/ouro_logo.png')}
-          style={{ width: 30, height: 30, marginLeft: '15%' }}
+          style={{ width: 40, height: 40, marginLeft: '15%' }}
         />
       </View>
       

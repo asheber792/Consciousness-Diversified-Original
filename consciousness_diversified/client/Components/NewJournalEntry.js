@@ -35,7 +35,11 @@ export default class NewJournalEntry extends Component {
 			)
 		}
 		catch(e){
-			console.error(e)
+			RN.Alert.alert(
+				'Entry Save Error', 
+				'You must at least include content for your entry',
+				[{text: 'OK', onPress: () => this.props.navigation.navigate("NewJournalEntry")}]
+			)
 		}
 	}
 
