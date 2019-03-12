@@ -16,7 +16,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |2/28/19| Pseudocode / actual code | Complete
 |3/2/19| MVP unstyled | Complete
 |3/3/19| MVP styled | Complete
-|3/6/19| Present | Incomplete
+|3/6/19| Present | Complete
 
 
 ## Project Description
